@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BiEmoji</title>
+    <link rel="icon" href="img/ico.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://leonardogonzalezdev.github.io/" class="logo">Otros Proyectos</a>
+        </header>
+        <h1> <span class="accent-text">BiEmoji</span> Traductor</h1>
+        <div class="translator">
+            <textarea id="inputText" placeholder="Escribe tu texto aquí"></textarea>
+            <button onclick="textToBinary()">Traducir a Emoji</button>
+            <button onclick="emojiToText()">Traducir a Texto</button>
+            <button onclick="copyTranslatedText()">Copiar</button>
+            <textarea id="outputText" placeholder="Resultado aquí" readonly></textarea>
+        </div>
+        <footer>
+            <p>&copy; 2023 Leonardo Gonzalez. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js') // Registra el Service Worker
+                .then(registration => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch(error => {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+        }
+    </script>
+</body>
+</html>
