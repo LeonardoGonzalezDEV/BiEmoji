@@ -2,7 +2,7 @@
     "name": "BiEmoji",
     "short_name": "BiE",
     "start_url": "index.html",
-    "display": "standalone",
+    "display": "fullscreen",
     "background_color": "#ffffff",
     "theme_color": "#1a759f",
     "icons": [
